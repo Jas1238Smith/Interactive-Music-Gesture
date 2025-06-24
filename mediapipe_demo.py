@@ -6,8 +6,6 @@ import mediapipe as mp
 def main():
     # Load the camera
     cap = cv.VideoCapture(0)
-    # cap.set(cv.CAP_PROP_FRAME_WIDTH, 960)
-    # cap.set(cv.CAP_PROP_FRAME_HEIGHT, 540)
     if not cap.isOpened():
         print("Cannot open camera")
         exit()
