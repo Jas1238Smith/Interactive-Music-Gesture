@@ -5,7 +5,6 @@ import mediapipe as mp
 from pythonosc import osc_message_builder
 from pythonosc import udp_client
 
-from sklearn.model_selection import train_test_split
 import mediapipe as mp
 
 from threading import Thread
@@ -17,12 +16,6 @@ start_client = udp_client.UDPClient("127.0.0.1", 8003)
 end_client = udp_client.UDPClient("127.0.0.1", 8004)
 
 empty_msg = osc_message_builder.OscMessageBuilder(address="dummy").build()
-
-NUM_CLASSES = 9
-UPDATE_FLAG = False
-MODEL_LOCK_FLAG = False
-RANDOM_SEED = 42
-DETRAIN = False
 
 INPUT_FLAG = False
 CONNECTED_FINGERS = [4, 8]
