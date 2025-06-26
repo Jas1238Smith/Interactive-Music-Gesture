@@ -27,7 +27,7 @@ def update_labels():
 
     while True:
         if INPUT_FLAG:
-            input("Which keypoints should be connected?")
+            print("Which keypoints should be connected?")
             idx = int(input("Which finger is first (0-20)?"))
             if -1 < idx < 21:
                 CONNECTED_FINGERS[0] = idx
