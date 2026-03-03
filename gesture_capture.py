@@ -52,15 +52,14 @@ def main():
         exit()
 
     # Mediapipe Hands
-    mp_hands = mp.solutions.hands
-    hands = mp_hands.Hands(
+    hands = mp.solutions.hands.Hands(
         static_image_mode=True,
         max_num_hands=2,
-        min_detection_confidence=0.7,
-        min_tracking_confidence=0.5,
+        min_detection_confidence=0.5,
+        min_tracking_confidence=0.25,
     )
 
-    # Online Training
+    # Online Training/Relabeling
     inputThread = Thread(
         target=update_labels,
     )
